@@ -80,7 +80,7 @@ if (!file.exists("data/2017-icc-ccs-raw-httr-responses.rds")) {
     s_GET(.x)
   }) -> httr_raw_responses
 
-  write_rds(httr_raw_responses, "data/2017-icc-ccs-raw-httr-responses.rds")
+  write_rds(httr_raw_responses, "data/2017-icc-ccs-raw-httr-responses.rds", compress = "xz")
 } else {
   httr_raw_responses <- read_rds("data/2017-icc-ccs-raw-httr-responses.rds")
 }
